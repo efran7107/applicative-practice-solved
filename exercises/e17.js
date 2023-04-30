@@ -9,13 +9,32 @@
  */
 
 export function minBy(array, cb) {
-  // Your code goes here...
-
+    let numOfPeople = array.length;
+    if (numOfPeople == 0) {
+        return undefined;
+    }
+    let min = cb(array[0]);
+    for (let el of array) {
+        if (cb(el) < min) {
+            min = cb(el);
+        }
+    }
+    let minPerson = array.find(person => cb(person) === min);
+    return minPerson;
 }
 
 export function maxBy(array, cb) {
-  // Your code goes here...
-
+    if (array.length === 0) {
+        return undefined;
+    }
+    let max = cb(array[0]);
+    for (let el of array) {
+        if (cb(el) > max) {
+            max = cb(el);
+        }
+    }
+    let maxPerson = array.find(person => cb(person) === max);
+    return maxPerson;
 }
 
 

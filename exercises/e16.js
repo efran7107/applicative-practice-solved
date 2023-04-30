@@ -8,10 +8,14 @@
  * The function MUST NOT use the find() method.
  */
 
-
 export function find(array, callback) {
-  // Your code goes here...
-  
+    let tempArray = [];
+    for (let element of array) {
+        if (callback(element)) {
+            tempArray.push(element);
+        }
+    }
+    return tempArray[0];
 }
 
 

@@ -6,11 +6,7 @@
 
 export function getGreatestDiscoveryYear(data) {
 
-    let yearMostDescoveries = data.asteroids.map(function(asteroids) {
-        return asteroids.discoveryYear;
-    })
-
-    yearMostDescoveries.sort();
+    let yearMostDescoveries = data.asteroids.map((asteroids) => asteroids.discoveryYear).sort();
 
     let mf = 1;
     let m = 0;

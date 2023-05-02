@@ -5,7 +5,7 @@ import { data } from "../data/data";
 // Return example: 42
 
 export function allPlanetsMoonsCount(data) {
-    let sumMoons = data.planets
+    return data.planets
         .map(function(planet) {
             if (planet.moonsCount == undefined) {
                 return 0;
@@ -14,8 +14,7 @@ export function allPlanetsMoonsCount(data) {
         })
         .reduce(function(acc, val) {
             return acc + val;
-        })
-    return sumMoons;
+        });
 }
 
 
